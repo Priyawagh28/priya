@@ -1,0 +1,145 @@
+ vi prime.sh
+bash prime.sh
+
+1) WASS to accept a number from user and show its math table upto 10 
+echo "Enter No"
+read n;
+for((i=1;i<=10;i++))
+do
+        echo "`expr $n \* $i`"
+done
+~
+
+
+
+2) WASS to accept a number from user and show its factorial 
+echo "enter a number"
+read n
+fact=1
+for((i=2;i<=n;i++))
+do
+        fact=`expr $fact \* $i`
+done
+echo "$fact"
+
+3)WASS to accept a number from the user and tell
+	whether it is prime or not 
+
+
+echo "Enter The Number"
+read n
+for((x=2;x<=n;x++))
+do
+        if [ "`expr $sn % $x`" -eq 0 ]
+        then
+                break
+        fi
+done
+if [ $n -eq $x ]
+then
+        echo "prime"
+else
+        echo "not prime"
+fi
+~
+
+
+
+4)5. WASS to show a menu  - 1. add ,2. subtract , 3 multiple 4 divide
+	for non integer numbers 
+
+
+while(true)
+do
+        echo "Select An Option:"
+        echo "1.Add"
+        echo "2.Substract"
+        echo "3.Multiply"
+        echo "4.Divide"
+        echo "5.Exit"
+        echo "Enter Your choice"
+        read ch;
+
+        if [ " $ch " -eq 5 ];
+
+        then
+                echo "Exit In the Program"
+                break
+        fi
+
+        echo "Enter The First Number:"
+        read num1
+        echo "ENter The second no"
+        read num2
+
+        case $ch in
+                1) x=$((num1+num2))
+                        echo "sum=" $x
+                        ;;
+                2) x=$((num1-num2))
+                        echo "substrct=" $x
+                        ;;
+                3) x=$((num1*num2))
+                        echo "Multiply=" $x
+                        ;;
+                4) x=$((num1/num2))
+                        echo "Divide=" $x
+                        ;;
+        esac
+done
+
+5)
+WASS program to accept a number from user 
+	for ex user enters 3
+	show output  
+		1
+		1 2 
+		1 2 3
+		1 2
+		1
+
+
+echo "Enter No"
+read num;
+
+# Print the increasing sequence
+for ((i=1; i<=num; i++)); do
+        for ((j=1;j<=i; j++ ));do
+                echo -n "$j "
+        done
+        echo
+done
+for ((i=num-1; i>=1; i--)); do
+        for((j=1; j<=i; j++)); do
+                echo -n "$j "
+        done
+        echo
+done
+
+
+6)WASS program to accept a number from user 
+	for ex user enters 3
+	show output  
+                *
+		* *
+		* * *
+		* *
+		*
+===>OUTPUT
+
+echo "Enter No"
+read num;
+
+# Print the increasing sequence
+for ((i=1; i<=num; i++)); do
+        for ((j=1;j<=i; j++ ));do
+                echo -n "* "
+        done
+        echo
+done
+for ((i=num-1; i>=1; i--)); do
+        for((j=1; j<=i; j++)); do
+                echo -n "* "
+        done
+        echo
+done
